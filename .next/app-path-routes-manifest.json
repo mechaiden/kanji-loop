@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/extract/route": "/api/extract",
+  "/api/practice/route": "/api/practice",
+  "/favicon.ico/route": "/favicon.ico",
+  "/import/page": "/import",
+  "/page": "/",
+  "/sets/[id]/learn/page": "/sets/[id]/learn",
+  "/sets/[id]/page": "/sets/[id]",
+  "/sets/[id]/sentences/page": "/sets/[id]/sentences"
+}

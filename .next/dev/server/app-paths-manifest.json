@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/extract/route": "app/api/extract/route.js",
+  "/api/practice/route": "app/api/practice/route.js",
+  "/import/page": "app/import/page.js",
+  "/page": "app/page.js",
+  "/sets/[id]/learn/page": "app/sets/[id]/learn/page.js",
+  "/sets/[id]/page": "app/sets/[id]/page.js",
+  "/sets/[id]/sentences/page": "app/sets/[id]/sentences/page.js"
+}

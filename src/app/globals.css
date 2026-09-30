@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0b0d12;
+  --color-surface: #141822;
+  --color-surface-raised: #1c2130;
+  --color-border: #262c3b;
+  --color-foreground: #e8eaf0;
+  --color-muted: #939bb0;
+  --color-accent: #7c8cff;
+  --color-correct: #34d399;
+  --color-almost: #fbbf24;
+  --color-wrong: #fb7185;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-jp: var(--font-noto-jp), "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Japanese needs a font stack that actually has the glyphs, and a little extra
+ * line height — kanji are visually denser than latin text at the same size.
+ */
+.jp {
+  font-family: var(--font-jp);
+  line-height: 1.5;
+  font-feature-settings: "palt";
+}
+
+/* Used on every focusable control so keyboard-only study is comfortable. */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.animate-shake {
+  animation: shake 0.32s ease-in-out;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise {
+  animation: rise 0.18s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-rise {
+    animation: none;
+  }
+}
